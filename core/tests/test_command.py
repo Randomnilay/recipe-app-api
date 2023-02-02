@@ -10,9 +10,9 @@ from django.db.utils import OperationalError
 from django.test import SimpleTestCase
 
 
-@patch('core.management.commands.wait_for_db.Command.check')
+@patch('core.management.command.wait_for_db.Command.check')
 class CommandTests(SimpleTestCase):
-    """Test commands"""
+    """Test commands."""
 
     def test_wait_for_db_ready(self, patched_check):
         """Test waiting for database if database ready."""
